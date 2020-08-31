@@ -1,0 +1,91 @@
+
+-- Exits:
+-- [/] u [/]
+--  l     r
+-- [/] d [/]
+
+-- Single: u, r, d, l
+-- Double: ur, rd, dl, ul
+-- Line: ud, rl
+-- Triple: urd, rdl, udl, url
+-- Cross: urdl
+
+rooms = {}
+
+spawn_postfix = ""
+
+-- Styles
+
+rooms.styles = {
+    "default"
+}
+
+-- Single
+
+rooms.u = {
+    creeps = {"_room_u"}
+}
+
+rooms.r = {
+    creeps = {"_room_r"}
+}
+
+rooms.d = {
+    creeps = {"_room_d"}
+}
+
+rooms.l = {
+    creeps = {"_room_l"}
+}
+
+-- Double
+
+rooms.ur = {
+    creeps = {"_room_ur"}
+}
+
+rooms.rd = {
+    creeps = {"_room_rd"}
+}
+
+rooms.dl = {
+    creeps = {"_room_dl"}
+}
+
+rooms.ul = {
+    creeps = {"_room_ul"}
+}
+
+-- Line
+
+rooms.ud = {
+    creeps = {"_room_ud"}
+}
+
+rooms.rl = {
+    creeps  = {"_room_rl"}
+}
+
+-- Triple
+
+rooms.urd = {
+    creeps = {"_room_urd"}
+}
+
+rooms.rdl = {
+    creeps = {"_room_rdl"}
+}
+
+rooms.udl = {
+    creeps = {"_room_udl"}
+}
+
+rooms.url = {
+    creeps = {"_room_url"}
+}
+
+-- Cross
+
+rooms.urdl = {
+    creeps = {"_room_urdl"}
+}
