@@ -11,20 +11,50 @@
 --- Triple: urd, rdl, udl, url
 --- Cross: urdl
 
+--- Room map file name pattern: <room_style>_room_<room_content_type>_<room_exit_type>
+--- Example: default_room_spawn_urdl, default_room_centaurs_ur
+--- Room content unique for all rooms
+
+--- Exits
+
+EXIT_OFFSETS = {
+    u = Vector2(0, 1),
+    r = Vector2(1, 0),
+    d = Vector2(0, -1),
+    l = Vector2(-1, 0)
+}
+
+EXIT_ROTATIONS = {
+    u = 0,
+    r = 90,
+    d = 180,
+    l = 270
+}
+
+EXIT_REVERSED = {
+    u = "d",
+    r = "l",
+    d = "u",
+    l = "r"
+}
+
 --- Rooms
 
 ROOMS = {}
 
+--- Additional room configs by room content
 ROOMS.CONFIGS = {
     spawn = {
-        hero_spawn_pos = Vector(0, 0, 0)
+        hero_spawn_pos = Vector(0, 0, 256)
     }
 }
 
+--- Room content types sorted by room type and deep (ROOMS.TYPES[room_type][deep]),
+--- for example:
+--- start_room_content_types = ROOMS.TYPES["START"][1]
 ROOMS.TYPES = {
     START = {
-        -- Deep 1
-        { "spawn" }
+        [1] = { "spawn" }
     }
 }
 
@@ -40,21 +70,20 @@ function SelectRandomRoomsStyle()
 end
 
 ---
---- Returns a room name by pattern `<style>_room_<room_type>_<exit_type>`
+--- Returns a room name by pattern `<style>_room_<content_type>_<exit_type>`
 --- such as "default_room_spawn_urdl" or "default_room_urdl"
----@overload fun(exit_type:string, content_type:string, deep:number):string
 ---@overload fun(exit_type:string, content_type:string):string
 ---@overload fun(exit_type:string):string
 ---@param exit_type string
----@param room_type string
----@param room_style string
+---@param content_type string
+---@param style string
 ---@return string
-function GetRoomName(exit_type, room_type, room_style)
+function GetRoomName(exit_type, content_type, style)
     return "default_room_spawn_urdl"
     --room_style = room_style or SELECTED_ROOMS_STYLE
     --
     --local table_to_concat = {}
-    --for _, value in pairs({room_style, "room", room_type, exit_type}) do
+    --for _, value in pairs({room_style, "room", room_content, exit_type}) do
     --    if value ~= nil then
     --        table.insert(table_to_concat, value)
     --    end
@@ -64,21 +93,21 @@ function GetRoomName(exit_type, room_type, room_style)
 end
 
 ---
---- Returns a random room type for content such as "boss_omni" or "hard_centaurs"
+--- Returns a random room content by room type
 ---@overload fun(content_type:string):string
----@param content_type string
+---@param room_type string
 ---@param deep number
 ---@return string
-function GetRandomRoomTypeByContent(content_type, deep)
+function GetRandomRoomContentByType(room_type, deep)
     deep = deep or 1
-    content_type = string.upper(content_type)
+    room_type = string.upper(room_type)
 
-    local rooms_by_content = ROOMS.TYPES[content_type]
-    if rooms_by_content ~= nil and #rooms_by_content > 0 then
-        local rooms_by_deep = rooms_by_content[deep]
+    local rooms_by_type = ROOMS.TYPES[room_type]
+    if rooms_by_type ~= nil and #rooms_by_type > 0 then
+        local rooms_by_deep = rooms_by_type[deep]
         if rooms_by_deep ~= nil and #rooms_by_deep > 0 then
             return rooms_by_deep[math.random(#rooms_by_deep)]
         end
     end
-    print("ERROR! Unable to get room type, content_type: "..content_type..", ", tostring(deep))
+    print("ERROR! Unable to get random room content room type: "..room_type.."#"..tostring(deep))
 end

@@ -1,9 +1,0 @@
-
--- Game config
-
-SOLO_MODE = {
-    MAX_PLAYERS = 1,
-    TEAMS = {2, 3, 7, 8, 9, 10, 11, 12},
-
-    STARTING_GOLD = 650,
-}

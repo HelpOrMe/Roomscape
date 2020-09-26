@@ -1,3 +1,393 @@
 "DOTAUnits"
 {
+	//=================================================================================================================
+	// Destructible Gate Tier 1
+	//=================================================================================================================
+	"npc_dota_gate_destructible_tier1"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"
+		"Model"						"models/props_generic/gate_wooden_locked_01.vmdl"
+		"ModelScale"				"1.0"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"310"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Destructible Gate Tier 1: Destruction Anim
+	//=================================================================================================================
+	"npc_dota_gate_destructible_tier1_anim"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"
+		"Model"						"models/props_generic/gate_wooden_destruction.vmdl"
+		"ModelScale"				"1.0"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		//"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		//"RingRadius"				"150"
+		//"HealthBarOffset"			"310"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Destructible Gate Tier 2
+	//=================================================================================================================
+	"npc_dota_gate_destructible_tier2"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"
+		"Model"						"models/props_generic/gate_wooden_locked_02.vmdl"
+		"ModelScale"				"1.0"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"13"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"340"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Destructible Gate Tier 2: Destruction Anim
+	//=================================================================================================================
+	"npc_dota_gate_destructible_tier2_anim"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"
+		"Model"						"models/props_generic/gate_wooden_destruction_02.vmdl"
+		"ModelScale"				"1.0"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"13"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"340"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Destructible Gate Tier 3
+	//=================================================================================================================
+	"npc_dota_gate_destructible_tier3"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"
+		"Model"						"models/props_generic/gate_wooden_locked_03.vmdl"
+		"ModelScale"				"1.0"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"21"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"390"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Destructible Gate Tier 3: Destruction Anim
+	//=================================================================================================================
+	"npc_dota_gate_destructible_tier3_anim"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"
+		"Model"						"models/props_generic/gate_wooden_destruction_03.vmdl"
+		"ModelScale"				"1.0"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+		"ConsideredHero"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"21"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"410"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1"
+		"StatusHealthRegen"			"0"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	}
+
+	//=================================================================================================================
+	// Open Gate
+	//=================================================================================================================
+	"npc_dota_gate_open"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"
+		"Model"						"models/props_generic/gate_wooden_open_01.vmdl"
+		"ModelScale"				"1.4"
+		"IsDiscoverable"			"1"
+		"Level"						"1"
+		"MaxLevel"					"6"
+		"IsAncient"					"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"
+		// this is made magical and pure immune in its modifier
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+		"HealthBarOffset"			"220"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1"
+		"StatusHealthRegen"			"0"
+
+		// Creature Data
+		//----------------------------------------------------------------------------------------------------------------------
+		"Creature"
+		{
+			//Level Up
+			"HPGain"					"600"
+			"ArmorGain"					"6"
+		}
+	}
+
+
+	//=================================================================================================================
+	// Blocked Gate
+	//=================================================================================================================
+	"npc_dota_gate_blocked"
+	{
+		"BaseClass"					"npc_dota_rotatable_building"
+		"Model"						"models/props_rock/riveredge_rock_wall003a.vmdl"
+		"ModelScale"				"1"
+		"IsDiscoverable"			"1"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"20"
+		"MagicalResistance"			"100"
+        "AbilityUnitTargetFlags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"
+		"BountyGoldMin"				"0"
+		"BountyGoldMax"				"0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"			"DOTA_HULL_SIZE_BARRACKS"
+		"RingRadius"				"150"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"				"0"
+		"MovementTurnRate"			"0"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1"
+		"StatusHealthRegen"			"0"
+	}
 }

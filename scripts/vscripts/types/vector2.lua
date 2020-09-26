@@ -13,8 +13,21 @@ function Vector2.Distance(vec1, vec2)
     return math.sqrt((vec2.x - vec1.x) ^ 2 + (vec2.y - vec1.y) ^ 2)
 end
 
+function Vector2:Round(dec)
+    dec = dec or 0
+
+    local mult = 10^(dec or 0)
+    self.x = math.floor(self.x * mult + 0.5) / mult
+    self.y = math.floor(self.y * mult + 0.5) / mult
+end
+
+function Vector2:Floor()
+    self.x = math.floor(self.x)
+    self.y = math.floor(self.y)
+end
+
 function Vector2:ToVector3()
-    return Vector(self.x, self.y, 0);
+    return Vector(self.x, self.y, 0)
 end
 
 function Vector2.__add(vec1, vec2)

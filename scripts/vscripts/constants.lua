@@ -24,12 +24,11 @@ SOLO_MODE.EXTEND_DEAD_ENDS = true
 SOLO_MODE.SPAWN_ROOMS_COUNT = 8
 SOLO_MODE.SPAWN_ROOM_TYPES = "All"
 
--- Rand value from list
 SOLO_MODE.BOSS_ROOMS_COUNT = {8, 12}
-SOLO_MODE.BOSS_ROOM_TYPES = "All"
+SOLO_MODE.BOSS_CONTENT_TYPES = "All"
 
-SOLO_MODE.SPECIAL_ROOM_CONTENT_TYPES = {"spawn", "boss"}
-SOLO_MODE.SPECIAL_ROOM_SPAWN_DISTANCE = 1
+SOLO_MODE.SPECIAL_ROOM_TYPES = { "SPAWN", "BOSS"}
+SOLO_MODE.SPECIAL_ROOM_SPAWN_DISTANCE = 0
 
 --- Selected mode
 
@@ -40,10 +39,15 @@ function SelectModeByMap(map_name)
     SELECTED_MODE = GetModeForMap(map_name)
 end
 
+---
+--- Search for mode names in map name
+--- Return DEFAULT_MODE if nothing is found
+---@param map_name string
+---@return table
 function GetModeForMap(map_name)
     for _, mode in pairs(MODES) do
-        if map_name:find(mode.."$") then
-            return mode
+        if map_name:find(string.lower(mode).."$") then
+            return _G[mode]
         end
     end
     return DEFAULT_MODE

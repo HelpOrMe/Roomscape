@@ -26,7 +26,7 @@ function MazeGenerator:constructor(size)
         [Vector2(0, 1)]  = "u",
         [Vector2(1, 0)]  = "r",
         [Vector2(0, -1)] = "d",
-        [Vector2(-1, 0)] = "l"
+        [Vector2(-1, 0)] = "l",
     })
 end
 

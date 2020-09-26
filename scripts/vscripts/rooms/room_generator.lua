@@ -4,15 +4,14 @@ if RoomGenerator == nil then
 end
 
 require("constants")
-require("utils")
-require("map")
+require("lua_utils")
 require("maze_generator")
 
 require("types/vector2")
 
+require("rooms/room_map")
 require("rooms/room")
 require("rooms/room_types")
-
 
 ----------------------------------------------------------------------------
 
@@ -49,8 +48,8 @@ function RoomGenerator:GenerateStartRooms(count)
 
     for position, exit_type in pairs(self._maze_copy_shuffled) do
         if count > 0 then
-            if not Map:IsSpecialRoomsNearExists(position) then
-                Map:AddRoom("start", Room(position, {exit_type=exit_type, content_type="start"}))
+            if not RoomMap:IsSpecialRoomsNearExists(position) then
+                RoomMap:AddRoom(Room(position, {exit_type=exit_type, room_type="START"}))
                 count = count - 1
             end
         end
